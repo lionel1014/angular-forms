@@ -13,7 +13,7 @@ export class AppComponent {
   constructor(private form : FormBuilder){
     this.userForm = this.form.group({
       nombre:['', Validators.required],
-      edad:['', [Validators.required, Validators.max(180)]],
+      edad:['', [Validators.required, Validators.max(180) , Validators.pattern("^[0-9]*$")]],
       empresa:['', Validators.required],
       email:['', [Validators.required , Validators.email]],
     })
